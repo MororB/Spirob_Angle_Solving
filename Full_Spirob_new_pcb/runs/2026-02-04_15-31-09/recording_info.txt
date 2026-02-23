@@ -1,0 +1,4 @@
+Run: 2026-02-04_15-31-09
+Serial: COM6 @ 1000000
+Columns: DATA,ID,accX,accY,accZ,magX,magY,magZ
+Sync: Toggles every 1000ms

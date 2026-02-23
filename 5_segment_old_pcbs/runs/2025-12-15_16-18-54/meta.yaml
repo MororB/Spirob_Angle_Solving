@@ -1,0 +1,6 @@
+run: 2025-12-15_16-18-54
+calibrated: True
+calib_file: calibration_data.npz
+video_res: 640x480@30.00
+labels: theta_unit=deg
+kommentar: "erster Datensatz mit kalibrierten Video"

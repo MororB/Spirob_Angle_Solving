@@ -1,0 +1,21 @@
+{
+    "timestamp": "2026-01-19_16-15-57",
+    "final_val_loss": 0.00040124103202771874,
+    "input_dim": 12,
+    "output_dim": 4,
+    "active_sensors": [
+        0
+    ],
+    "architecture": {
+        "hidden_size": 64,
+        "num_layers": 2
+    },
+    "training_params": {
+        "num_epochs": 100,
+        "learning_rate": 0.001,
+        "batch_size": 32,
+        "hidden_size": 64,
+        "num_layers": 2,
+        "comment": "Automatisch \u00fcbernommen"
+    }
+}

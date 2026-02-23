@@ -1,0 +1,6 @@
+run: 2025-12-08_14-23-18
+serial: COM5 @ 1000000
+camera: idx=0 backend=CAP_MSMF
+video: request=1920x1080@30
+aruco: DICT_4X4_50 id_to_segment={0: 0, 1: 1, 2: 2, 3: 3, 4: 4}
+labels: theta_unit=deg

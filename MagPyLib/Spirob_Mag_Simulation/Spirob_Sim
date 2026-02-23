@@ -1,0 +1,42 @@
+import numpy as np
+import magpylib as magpy
+import matplotlib.pyplot as plt
+
+# --- CONFIGURATION ---
+NUM_JOINTS = 13
+NUM_SENSORS = 6
+L0 = 0.040          # Basis-Länge des ersten Segments (40mm)
+SCALE_FACTOR = 0.9  # Jedes Segment ist 90% vom vorherigen
+MAG_STRENGTH = 1e6  # Magnetisierung A/m
+
+# 1. Positionen berechnen (theoretisch auf einer Achse)
+magnets = []
+sensors = []
+current_x = 0
+
+# Wir platzieren die Magnete (an den Gelenken)
+for i in range(NUM_JOINTS):
+    pos = (current_x, 0, 0)
+    mag = magpy.magnet.Cylinder(
+        dimension=(0.005, 0.005), # 5x5mm
+        magnetization=(0, 0, MAG_STRENGTH),
+        position=pos,
+        label=f"Magnet_J{i}"
+    )
+    magnets.append(m)
+    current_x += L0 * (SCALE_FACTOR ** i) # Skalierung der Segmente
+
+# Wir platzieren die 6 Sensoren (z.B. gleichmäßig verteilt oder auf fixen Platinen)
+sensor_positions = np.linspace(0, current_x * 0.8, NUM_SENSORS)
+for i, sx in enumerate(sensor_positions):
+    s = magpy.Sensor(position=(sx, 0, 0.010), label=f"Sensor_P{i}") # 10mm über der Achse
+    sensors.append(s)
+
+# 2. Simulation einer Bewegung
+# Was passiert, wenn Gelenk 5 sich um 30 Grad dreht?
+coll = magpy.Collection(magnets)
+# Hier können wir Rotationen auf Segmente anwenden
+# coll.rotate_from_angax(angle=30, axis='z', anchor=magnets[5].position)
+
+# 3. Feld berechnen
+B_at_sensors = [magpy.getB(coll, s) for s in sensors]

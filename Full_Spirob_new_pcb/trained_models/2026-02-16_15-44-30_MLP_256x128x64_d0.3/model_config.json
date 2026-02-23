@@ -1,0 +1,45 @@
+{
+    "timestamp": "2026-02-16_15-44-30",
+    "model_type": "FeedForward",
+    "input_size": 6,
+    "output_size": 13,
+    "output_dim": 13,
+    "hidden_layers": [
+        256,
+        128,
+        64
+    ],
+    "hidden_size": 256,
+    "dropout_rate": 0.3,
+    "weight_decay": 0,
+    "window_size": 1,
+    "learning_rate": 0.001,
+    "epochs": 200,
+    "batch_size": 16,
+    "final_val_loss": 0.009925708955583664,
+    "angle_weight_alpha": 0,
+    "early_stopping_patience": 100,
+    "sensor_features": [
+        "magX_0",
+        "magX_1",
+        "magX_2",
+        "magX_3",
+        "magX_4",
+        "magX_5"
+    ],
+    "output_columns": [
+        "theta_1",
+        "theta_2",
+        "theta_3",
+        "theta_4",
+        "theta_5",
+        "theta_6",
+        "theta_7",
+        "theta_8",
+        "theta_9",
+        "theta_10",
+        "theta_11",
+        "theta_12",
+        "theta_13"
+    ]
+}

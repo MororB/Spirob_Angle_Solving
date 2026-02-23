@@ -1,0 +1,23 @@
+{
+    "timestamp": "2025-12-15_12-47-11",
+    "final_val_loss": 0.00024260509007945075,
+    "input_dim": 36,
+    "output_dim": 4,
+    "active_sensors": [
+        0,
+        2,
+        4
+    ],
+    "architecture": {
+        "hidden_size": 64,
+        "num_layers": 2
+    },
+    "training_params": {
+        "window_size": 10,
+        "hidden_size": 64,
+        "num_layers": 2,
+        "learning_rate": 0.001,
+        "epochs": 100,
+        "batch_size": 32
+    }
+}

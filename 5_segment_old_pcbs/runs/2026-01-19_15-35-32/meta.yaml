@@ -1,0 +1,5 @@
+run: 2026-01-19_15-35-32
+calibrated: True
+calib_file: calibration_data.npz
+video_res: 640x480@30.00
+labels: theta_unit=deg
